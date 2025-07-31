@@ -2,27 +2,124 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>FYTRWEAR | Train Like A Machine</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FYTRWEAR | Strength Starts Here</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap');
+
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Montserrat', sans-serif;
+      height: 100%;
+      background-color: #0a0a0a;
+      color: #fff;
+    }
+
+    .hero {
+      position: relative;
+      height: 100vh;
+      background: url('https://images.pexels.com/photos/791763/pexels-photo-791763.jpeg') center center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.6);
+    }
+
+    .content {
+      position: relative;
+      z-index: 2;
+      max-width: 600px;
+      padding: 0 20px;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      letter-spacing: 3px;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      color: #ccc;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    input[type="email"] {
+      padding: 12px 20px;
+      width: 100%;
+      max-width: 400px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      margin-bottom: 15px;
+    }
+
+    button {
+      background-color: #f03e3e;
+      color: #fff;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #d92f2f;
+    }
+
+    @media screen and (max-width: 600px) {
+      h1 {
+        font-size: 2.2rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+
+      input[type="email"] {
+        font-size: 0.95rem;
+      }
+
+      button {
+        font-size: 0.95rem;
+      }
+    }
+  </style>
 </head>
 <body>
-  <div class="hero">
-    <div class="overlay">
-      <div class="content">
-        <h1>UNLEASH YOUR POTENTIAL</h1>
-        <p>FYTRWEAR isn’t just gear — it’s your armor. Engineered for men who train with purpose. Built for performance. Worn with pride.</p>
-        <form id="signup-form">
-          <input type="email" id="email" placeholder="Enter your email..." required/>
-          <button type="submit">JOIN THE MOVEMENT</button>
-        </form>
-        <p class="subtext">Be the first to know when we launch. Get exclusive early access + discounts.</p>
-      </div>
+
+  <section class="hero">
+    <div class="overlay"></div>
+    <div class="content">
+      <h1>FYTRWEAR</h1>
+      <p>Unleash your strength. Engineered for lifters. Made for legacy.</p>
+
+      <!-- ✅ Netlify-enabled form -->
+      <form name="fytr-early-access" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="fytr-early-access" />
+        <input type="email" name="email" placeholder="Enter your email" required />
+        <button type="submit">Notify Me</button>
+      </form>
+
     </div>
-  </div>
-  <footer>
-    &copy; 2025 FYTRWEAR. All rights reserved.
-  </footer>
-  <script src="script.js"></script>
+  </section>
+
 </body>
 </html>
